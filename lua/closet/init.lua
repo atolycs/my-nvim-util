@@ -1,7 +1,7 @@
 local M = { setup_done = false }
 -- local configs = require("closet.config")
 
-function M.setup(config)
+function M.setup()
 	if M.setup_done then
 		return
 	end
@@ -10,7 +10,6 @@ function M.setup(config)
 	-- if config then
 	-- 	configs.set(config)
 	-- end
-
 	local cmds = require("closet.commands")
 	-- -- local config = require("closet.config")
 	-- -- config.set()
@@ -19,4 +18,6 @@ function M.setup(config)
 	M.setup_done = true
 end
 
-return M
+return {
+	setup = M.setup,
+}
