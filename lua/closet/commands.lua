@@ -1,5 +1,7 @@
 local M = {}
 
+local cmds = {}
+
 local function reopen()
 	vim.cmd(":e ++enc=cp932", {
 		desc = "File Re-Open Shift-JIS(cp932) encoding",
