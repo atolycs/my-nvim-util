@@ -16,6 +16,10 @@ function M.setup()
 	cmds.init()
 
 	M.setup_done = true
+
+	if M.setup_done then
+		vim.notify("Closet Loaded.", vim.log.levels.INFO)
+	end
 end
 
 return {

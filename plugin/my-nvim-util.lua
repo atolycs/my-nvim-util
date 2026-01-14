@@ -1,3 +1,5 @@
+local timer = (vim.uv or vim.loop).new_timer()
+
 if vim.g.loaded_closet then
 	return
 end
@@ -8,4 +10,14 @@ if vim.fn.has("nvim-0.7.0") == 0 then
 	return
 end
 
+timer:start(
+	500,
+	0,
+	vim.schedule_wrap(function()
+		local closet = require("closet")
+		if not closet.did_setup then
+			closet.setup()
+		end
+	end)
+)
 -- require("closet.init").setup()
