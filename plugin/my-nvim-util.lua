@@ -15,7 +15,8 @@ timer:start(
 	vim.schedule_wrap(function()
 		vim.notify("Auto Loading closet...", vim.log.levels.INFO, {
 			id = "atolycs-utility",
-			title = "󰤇 Amiya",
+			title = "Amiya",
+			icon = "󰤇",
 		})
 
 		local closet = require("closet")
@@ -27,7 +28,8 @@ timer:start(
 		if vim.g.loaded_closet then
 			vim.notify("WELCOME BACK Doctor.", vim.log.levels.INFO, {
 				id = "atolycs-utility",
-				title = "󰤇 Amiya",
+				title = "Amiya",
+				icon = "󰤇",
 			})
 		end
 	end)
