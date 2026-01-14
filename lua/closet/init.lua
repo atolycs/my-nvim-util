@@ -5,7 +5,9 @@ function M.setup()
 	if M.setup_done then
 		return
 	end
-	vim.notify("Loading closet...", vim.log.levels.INFO)
+	vim.notify("Loading closet...", vim.log.levels.INFO, {
+		id = "utility-closet",
+	})
 
 	-- if config then
 	-- 	configs.set(config)
@@ -18,7 +20,9 @@ function M.setup()
 	M.setup_done = true
 
 	if M.setup_done then
-		vim.notify("Closet Loaded.", vim.log.levels.INFO)
+		vim.notify("Closet Loaded.", vim.log.levels.INFO, {
+			id = "utility-closet",
+		})
 	end
 end
 
