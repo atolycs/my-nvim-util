@@ -9,6 +9,12 @@ if vim.fn.has("nvim-0.7.0") == 0 then
 	return
 end
 
+-- local atolycs_closet_table = {
+-- 	atolycs = {
+-- 		closet = { devterm = false },
+-- 	},
+-- }
+
 timer:start(
 	500,
 	0,
